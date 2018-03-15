@@ -3,7 +3,7 @@ package flappybird;
 import java.awt.image.BufferedImage;
 
 /**
- * 储存bird的position 储存bird的速度 bird的move bird重力
+ * 储存bird的position 储存bird的速度 bird的move bird重力 
  * 
  * @author 呆毛王
  *

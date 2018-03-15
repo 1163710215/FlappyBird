@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-public class Birdpanel extends JPanel {
+public class Birdpanel extends JPanel { 
 	Wall w1, w2;
 	BufferedImage background;
 	BufferedImage startImage;

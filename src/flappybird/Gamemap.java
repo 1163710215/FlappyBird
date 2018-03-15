@@ -9,7 +9,7 @@ import java.util.List;
  * @author ´ôÃ«Íõ
  *
  */
-class Gamemap {
+class Gamemap { 
 	public bird bd;
 	public List<Wall> walls;
 	private int moveLeftSpeed; 

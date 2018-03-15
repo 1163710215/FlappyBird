@@ -10,7 +10,7 @@ class ground {
 	/**
 	 * 初始化地面
 	 */
-	public ground() {
+	public ground() { 
 		throw new RuntimeException("ground.ground() : no scripts!");
 	}
 
