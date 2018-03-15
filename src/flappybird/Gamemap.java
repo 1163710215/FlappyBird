@@ -37,7 +37,7 @@ class Gamemap {
 		Wall tempWallUpper = new Wall(true);
 		Wall tempWallBottom = new Wall(false);
 		walls.add(tempWallUpper);
-		walls.add(tempWallBottom);
+		walls.add(tempWallBottom)£»
 	}
 
 	/**
