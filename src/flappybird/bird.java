@@ -28,13 +28,18 @@ class bird {
 
 	public bird() {
 		// TODO Auto-generated constructor stub
+		speed = 10;
 	}
 
 	/**
 	 * move表示一次激励 此处可以直接把bird速度加10试试
 	 */
 	public void move() {
-
+		throw new RuntimeException("bird.move() : no scripts!");
 	}
-
+	
+	public void changeSpeed()
+	{
+		this.speed = 10;
+	}
 }

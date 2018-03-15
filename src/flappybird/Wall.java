@@ -18,14 +18,14 @@ class Wall {
 	 * 随机生成墙,type表示种类 注意要生成可以通过的
 	 */
 	public Wall(boolean type) {
-
+		throw new RuntimeException("Wall.Wall() : no scripts!");
 	}
 
 	/**
 	 * 向左移动
 	 */
 	public void move() {
-
+		throw new RuntimeException("Wall.move() : no scripts!");
 	}
 
 }
