@@ -18,7 +18,7 @@ class ground {
 	 * µÿ√Ê“∆∂Ø
 	 */
 	public void move() {
-		throw new RuntimeException("ground.move() : no scripts!");
+		throw new RuntimeException("ground.move() : no scripts!"); 
 	}
 
 }

@@ -12,7 +12,7 @@ class Wall {
 	private int positionX;
 	private int height;
 	boolean type;// 种类
-	private BufferedImage img;
+	private BufferedImage img; 
 
 	/**
 	 * 随机生成墙,type表示种类 注意要生成可以通过的

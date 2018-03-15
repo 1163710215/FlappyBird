@@ -12,7 +12,7 @@ import java.util.List;
 class Gamemap {
 	public bird bd;
 	public List<Wall> walls;
-	private int moveLeftSpeed;
+	private int moveLeftSpeed; 
 	private int width;
 	private int height;
 

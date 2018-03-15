@@ -91,7 +91,7 @@ public class Birdpanel extends JPanel {
 			//contents
 			if(!gameover && start)
 			{
-				//TODO when gaming
+				//TODO when gaming 
 			}
 		}
 	}
