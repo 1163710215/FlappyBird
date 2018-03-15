@@ -14,7 +14,7 @@ class Gamemap {
 	public List<Wall> walls;
 	private int moveLeftSpeed; 
 	private int width;
-	private int height;
+	private int height; 
 
 	Gamemap() {
 		this.width = 674;
