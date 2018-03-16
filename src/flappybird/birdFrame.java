@@ -1,6 +1,7 @@
 package flappybird;
 
 import java.awt.EventQueue;
+import java.awt.Graphics;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
@@ -16,7 +17,6 @@ public class birdFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() { 
 			public void run() {
 				try {
-
 					birdFrame frame = new birdFrame();
 					frame.setVisible(true);
 					frame.panel.action();

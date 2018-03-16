@@ -1,17 +1,12 @@
 package flappybird;
 
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Panel;
-import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
-import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class Birdpanel extends JPanel {
@@ -48,7 +43,7 @@ public class Birdpanel extends JPanel {
 	 * ´Ë´¦draw
 	 */
 	@Override
-	public void paint(Graphics g) {
+	public void paintComponent(Graphics g) {
 		super.paint(g);
 		g.drawImage(background, 0, 0, 432, 600, null);
 		g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
@@ -89,7 +84,6 @@ public class Birdpanel extends JPanel {
 				{
 					//start the game
 					start = true;
-					
 				}
 				else
 				{
@@ -104,7 +98,7 @@ public class Birdpanel extends JPanel {
 		//runtime function
 		while(true)
 		{
-			paint(null);
+			repaint();
 			//contents
 			if(!gameover && start)
 			{
