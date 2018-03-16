@@ -38,7 +38,7 @@ class ground {
 	
 	public int getX()
 	{
-		return this.positionX;
+		return this.positionX; 
 	}
 	
 	public BufferedImage getIMG()

@@ -14,7 +14,7 @@ import javax.imageio.ImageIO;
  *
  */
 class bird {
-	private int positionX;
+	private int positionX; 
 
 	private int positionY;
 

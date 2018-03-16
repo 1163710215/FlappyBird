@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 public class Birdpanel extends JPanel {
 	Wall w1, w2;
 	BufferedImage background;
-	BufferedImage startImage;
+	BufferedImage startImage; 
 	BufferedImage overImage;
 	ground gr;
 	bird bd;

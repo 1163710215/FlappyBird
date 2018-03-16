@@ -16,7 +16,7 @@ import javax.swing.ImageIcon;
  *
  */
 class Wall {
-	private int positionX;
+	private int positionX; 
 	private int height;//露出边缘的长度
 	private boolean type;// 种类
 	private BufferedImage img; 
