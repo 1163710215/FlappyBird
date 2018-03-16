@@ -1,12 +1,17 @@
 package flappybird;
 
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Panel;
+import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class Birdpanel extends JPanel { 
@@ -30,10 +35,11 @@ public class Birdpanel extends JPanel {
 		try {
 			gr = new ground();
 			bd = new bird();
-			background = ImageIO.read(this.getClass().getResource("/sources/背景/白天.png"));
-			startImage = ImageIO.read(this.getClass().getResource("/sources/其他/开始.png"));
-
-		} catch (IOException e) {
+			background = ImageIO.read(new FileInputStream("sources/背景/白天.png"));
+			startImage = ImageIO.read(new FileInputStream("sources/其他/开始.png"));
+			//background = ImageIO.read(this.getClass().getResource("/sources/背景/白天.png"));
+		    //startImage = ImageIO.read(this.getClass().getResource("/sources/其他/开始.png"));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -47,16 +53,16 @@ public class Birdpanel extends JPanel {
 		g.drawImage(background, 0, 0, null);
 		if(!start)
 		{
-			g.drawImage(startImage, 216, 337, null);
+			g.drawImage(startImage, 337, 216, null);
 		}
 		else
 		{
-			g.clearRect(0, 0, 432, 674);
+			//g.clearRect(0, 0, 674, 432);
 			g.drawImage(background, 0, 0, null);
 		}
 		if(gameover)
 		{
-			g.drawImage(overImage, 216, 337, null);
+			g.drawImage(overImage, 337, 216, null);
 		}
 	}
 

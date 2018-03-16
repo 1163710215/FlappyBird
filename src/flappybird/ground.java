@@ -1,5 +1,12 @@
 package flappybird;
 
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
 /**
  * 地面高度 以及地面
  * 
@@ -10,6 +17,7 @@ class ground {
 	/**
 	 * 初始化地面
 	 */
+	
 	public ground() { 
 		throw new RuntimeException("ground.ground() : no scripts!");
 	}

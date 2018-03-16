@@ -34,6 +34,24 @@ class bird {
 	/**
 	 * move表示一次激励 此处可以直接把bird速度加10试试
 	 */
+	public int getWidth()
+	{
+		return images.getWidth();
+	}
+	
+	public int getHeight()
+	{
+		return images.getHeight();
+	}
+	public int getX()
+	{
+		return positionX;
+	}
+	
+	public int getY()
+	{
+		return positionY;
+	}
 	public void move() {
 		throw new RuntimeException("bird.move() : no scripts!");
 	}
