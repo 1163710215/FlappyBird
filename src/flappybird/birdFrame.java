@@ -39,7 +39,7 @@ public class birdFrame extends JFrame {
 		setBounds(100, 100, 799, 550);
 		panel = new Birdpanel();
 		add(panel);
-		setSize(674, 432);
+		setSize(432, 674);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setVisible(true);

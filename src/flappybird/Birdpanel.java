@@ -50,19 +50,25 @@ public class Birdpanel extends JPanel {
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-		g.drawImage(background, 0, 0, null);
+		g.drawImage(background, 0, 0, 432, 600, null);
+		g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
 		if(!start)
 		{
-			g.drawImage(startImage, 337, 216, null);
+			g.drawImage(startImage,  0, 100, 432, 500, null);
 		}
 		else
 		{
-			//g.clearRect(0, 0, 674, 432);
-			g.drawImage(background, 0, 0, null);
+			if(!gameover)
+			{
+				g.clearRect(0, 0, 432, 674);
+				g.drawImage(background, 0, 0, 432, 600, null);
+				g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
+				g.drawImage(bd.getIMG(), bd.getX(), bd.getY(), null);
+			}
 		}
 		if(gameover)
 		{
-			g.drawImage(overImage, 337, 216, null);
+			g.drawImage(overImage, 0, 0, null);
 		}
 	}
 
@@ -83,17 +89,22 @@ public class Birdpanel extends JPanel {
 				{
 					//start the game
 					start = true;
+					
 				}
 				else
 				{
 					//change the speed
-					map.bd.changeSpeed();
+					if(!gameover)
+					{
+						map.bd.changeSpeed();
+					}
 				}
 			}
 		});
 		//runtime function
 		while(true)
 		{
+			paint(null);
 			//contents
 			if(!gameover && start)
 			{

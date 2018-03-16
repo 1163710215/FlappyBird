@@ -2,6 +2,8 @@ package flappybird;
 
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -17,11 +19,33 @@ class ground {
 	/**
 	 * 初始化地面
 	 */
+	private BufferedImage img;
+	private int positionX;
 	
 	public ground() { 
-		throw new RuntimeException("ground.ground() : no scripts!");
+		//throw new RuntimeException("ground.ground() : no scripts!");
+		this.positionX = 0;
+		try {
+			img = ImageIO.read(new FileInputStream("sources/背景/地.png"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-
+	
+	public int getX()
+	{
+		return this.positionX;
+	}
+	
+	public BufferedImage getIMG()
+	{
+		return this.img;
+	}
+	
 	/**
 	 * 地面移动
 	 */

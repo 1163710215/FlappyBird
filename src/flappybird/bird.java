@@ -1,6 +1,11 @@
 package flappybird;
 
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 /**
  * 储存bird的position 储存bird的速度 bird的move bird重力 
@@ -29,6 +34,15 @@ class bird {
 	public bird() {
 		// TODO Auto-generated constructor stub
 		speed = 10;
+		try {
+			images = ImageIO.read(new FileInputStream("sources/鸟/上.png"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -52,6 +66,12 @@ class bird {
 	{
 		return positionY;
 	}
+	
+	public BufferedImage getIMG()
+	{
+		return this.images;
+	}
+	
 	public void move() {
 		throw new RuntimeException("bird.move() : no scripts!");
 	}

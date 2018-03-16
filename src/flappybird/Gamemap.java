@@ -15,8 +15,8 @@ class Gamemap {
 	private int width;
 	private int height;
 	Gamemap() {
-		this.width = 674;
-		this.height = 432;
+		this.width = 432;
+		this.height = 674;
 		this.moveLeftSpeed = 3;
 	}
 
