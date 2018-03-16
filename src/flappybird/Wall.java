@@ -17,18 +17,20 @@ import javax.swing.ImageIcon;
  */
 class Wall {
 	private int positionX; 
-	private int height;//露出边缘的长度
+	private int positionY;
 	private boolean type;// 种类
 	private BufferedImage img; 
 
 	/**
 	 * 随机生成墙,type表示种类 注意要生成可以通过的
 	 */
-	public Wall(boolean type) {
+	public Wall(boolean type, int y) {
+		this.positionX = 432;
+		this.type = type;
 		if(type)
 		{
 			try {
-				img = ImageIO.read(new FileInputStream("/sources/柱子/反.png"));
+				img = ImageIO.read(new FileInputStream("sources/柱子/反.png"));
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -36,11 +38,12 @@ class Wall {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			this.positionY = y - this.img.getHeight() - 50;
 		}
 		else
 		{
 			try {
-				img = ImageIO.read(new FileInputStream("/sources/柱子/正.png"));
+				img = ImageIO.read(new FileInputStream("sources/柱子/正.png"));
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -48,19 +51,14 @@ class Wall {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			this.positionY = 650 - y;
 		}
 		//throw new RuntimeException("Wall.Wall() : no scripts!");
 	}
 
 	public int getWidth()
 	{
-		return img.getWidth(null);
-	}
-	
-	public int getHeightDelta()
-	{
-		//get displayed height
-		return height;
+		return img.getWidth();
 	}
 	
 	public int getHeight()
@@ -74,17 +72,29 @@ class Wall {
 		return positionX;
 	}
 	
+	public int getY()
+	{
+		return positionY;
+	}
+	
+	
 	public boolean getType()
 	{
 		//get upper or bottom
-		return type;
+		return this.type;
+	}
+	
+	public BufferedImage getIMG()
+	{
+		//get upper or bottom
+		return img;
 	}
 	
 	/**
 	 * 向左移动
 	 */
 	public void move() {
-		positionX-=5;
+		positionX -= 3;
 		//throw new RuntimeException("Wall.move() : no scripts!");
 	}
 

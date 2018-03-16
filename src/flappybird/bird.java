@@ -23,7 +23,7 @@ class bird {
 	private int score;// 成绩
 	private int speed;// 速度
 	// nothing
-	final private int g = 1;// 重力
+	final private double g = 1;// 重力
 
 	/**
 	 * 初始化bird 给它xy 给它速度
@@ -32,10 +32,10 @@ class bird {
 	 */
 
 	public bird() {
-		this.positionX = 0;
+		this.positionX = 50;
 		this.positionY = 250;
 		// TODO Auto-generated constructor stub
-		this.speed = 5;
+		this.speed = -20;
 		try {
 			images = ImageIO.read(new FileInputStream("sources/鸟/上.png"));
 		} catch (FileNotFoundException e) {
@@ -75,13 +75,13 @@ class bird {
 	
 	public void move() {
 		//this.positionX +=2;
-		changeSpeed();
 		this.positionY +=this.speed;
+		this.speed += g;
 		//throw new RuntimeException("bird.move() : no scripts!");
 	}
 	
 	public void changeSpeed()
 	{
-		this.speed +=g;
+		this.speed = -10;
 	}
 }

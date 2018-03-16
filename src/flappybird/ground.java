@@ -50,7 +50,15 @@ class ground {
 	 * µØÃæÒÆ¶¯
 	 */
 	public void move() {
-		this.positionX+=5;
+		int nextNum = this.positionX - 3;
+		if(nextNum >= -432)
+		{
+			this.positionX = nextNum;
+		}
+		else
+		{
+			this.positionX = 0;
+		}
 		//throw new RuntimeException("ground.move() : no scripts!"); 
 	}
 
