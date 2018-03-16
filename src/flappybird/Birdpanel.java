@@ -93,11 +93,11 @@ public class Birdpanel extends JPanel {
 		});
 		// runtime function
 		while (true) {
-			// paint(null);
 			// contents
 			if (!gameover && start) {
 				// TODO when gaming
 			}
+			repaint();
 		}
 	}
 
