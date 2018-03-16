@@ -74,13 +74,13 @@ class bird {
 	}
 	
 	public void move() {
-		this.positionX +=2;
-		this.positionY +=2;
+		//this.positionX +=2;
+		this.positionY +=5;
 		//throw new RuntimeException("bird.move() : no scripts!");
 	}
 	
 	public void changeSpeed()
 	{
-		this.speed = 20;
+		this.speed =10;
 	}
 }

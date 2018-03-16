@@ -50,7 +50,7 @@ class ground {
 	 * µÿ√Ê“∆∂Ø
 	 */
 	public void move() {
-		this.positionX++;
+		this.positionX+=5;
 		//throw new RuntimeException("ground.move() : no scripts!"); 
 	}
 
