@@ -97,6 +97,7 @@ public class Birdpanel extends JPanel {
 			if (!gameover && start) {
 				// TODO when gaming
 			}
+			//refresh the window
 			repaint();
 		}
 	}
