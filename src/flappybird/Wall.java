@@ -84,7 +84,8 @@ class Wall {
 	 * Ïò×óÒÆ¶¯
 	 */
 	public void move() {
-		throw new RuntimeException("Wall.move() : no scripts!");
+		positionX-=5;
+		//throw new RuntimeException("Wall.move() : no scripts!");
 	}
 
 }

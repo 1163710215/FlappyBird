@@ -35,7 +35,7 @@ class bird {
 		this.positionX = 0;
 		this.positionY = 250;
 		// TODO Auto-generated constructor stub
-		this.speed = 10;
+		this.speed = 5;
 		try {
 			images = ImageIO.read(new FileInputStream("sources/Äñ/ÉÏ.png"));
 		} catch (FileNotFoundException e) {
@@ -75,12 +75,13 @@ class bird {
 	
 	public void move() {
 		//this.positionX +=2;
-		this.positionY +=5;
+		changeSpeed();
+		this.positionY +=this.speed;
 		//throw new RuntimeException("bird.move() : no scripts!");
 	}
 	
 	public void changeSpeed()
 	{
-		this.speed =10;
+		this.speed +=g;
 	}
 }

@@ -80,12 +80,9 @@ public class Birdpanel extends JPanel {
 				if (!start) {
 					// start the game
 					start = true;
-				}
-				else
-				{
-					//change the speed
-					if(!gameover)
-					{
+				} else {
+					// change the speed
+					if (!gameover) {
 						map.bd.changeSpeed();
 					}
 				}
@@ -95,7 +92,12 @@ public class Birdpanel extends JPanel {
 		while (true) {
 			// contents
 			if (!gameover && start) {
-				// TODO when gaming
+				try {
+					bd.move();
+					Thread.sleep(200);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 			repaint();
 		}
