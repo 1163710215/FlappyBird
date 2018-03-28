@@ -1,13 +1,11 @@
 package flappybird;
 
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 
 /**
  * 墙体位置 墙体高度 墙体属性--是从上往下还是从下向上
@@ -16,10 +14,10 @@ import javax.swing.ImageIcon;
  *
  */
 class Wall {
-	private int positionX; 
+	private int positionX;
 	private int positionY;
 	private boolean type;// 种类
-	private BufferedImage img; 
+	private BufferedImage img;
 
 	/**
 	 * 随机生成墙,type表示种类 注意要生成可以通过的
@@ -27,8 +25,7 @@ class Wall {
 	public Wall(boolean type, int y) {
 		this.positionX = 432;
 		this.type = type;
-		if(type)
-		{
+		if (type) {
 			try {
 				img = ImageIO.read(new FileInputStream("sources/柱子/反.png"));
 			} catch (FileNotFoundException e) {
@@ -39,9 +36,7 @@ class Wall {
 				e.printStackTrace();
 			}
 			this.positionY = y - this.img.getHeight() - 50;
-		}
-		else
-		{
+		} else {
 			try {
 				img = ImageIO.read(new FileInputStream("sources/柱子/正.png"));
 			} catch (FileNotFoundException e) {
@@ -53,49 +48,42 @@ class Wall {
 			}
 			this.positionY = 650 - y;
 		}
-		//throw new RuntimeException("Wall.Wall() : no scripts!");
+		// throw new RuntimeException("Wall.Wall() : no scripts!");
 	}
 
-	public int getWidth()
-	{
+	public int getWidth() {
 		return img.getWidth();
 	}
-	
-	public int getHeight()
-	{
-		//get total height
+
+	public int getHeight() {
+		// get total height
 		return img.getHeight();
 	}
-	
-	public int getX()
-	{
+
+	public int getX() {
 		return positionX;
 	}
-	
-	public int getY()
-	{
+
+	public int getY() {
 		return positionY;
 	}
-	
-	
-	public boolean getType()
-	{
-		//get upper or bottom
+
+	public boolean getType() {
+		// get upper or bottom
 		return this.type;
 	}
-	
-	public BufferedImage getIMG()
-	{
-		//get upper or bottom
+
+	public BufferedImage getIMG() {
+		// get upper or bottom
 		return img;
 	}
-	
+
 	/**
 	 * 向左移动
 	 */
 	public void move() {
-		positionX -= 3;
-		//throw new RuntimeException("Wall.move() : no scripts!");
+		positionX -= 1;
+		// throw new RuntimeException("Wall.move() : no scripts!");
 	}
 
 }
