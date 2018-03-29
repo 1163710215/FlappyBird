@@ -73,6 +73,8 @@ public class Birdpanel extends JPanel {
 				}
 				// g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
 				g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
+				if (statement >= 3)
+					statement = 0;
 				g.drawImage(bd.getIMG()[statement], bd.getX(), bd.getY(), null);
 				Font font = new Font("¿¬Ìå", Font.BOLD, 30);
 				g.setFont(font);
@@ -97,7 +99,7 @@ public class Birdpanel extends JPanel {
 
 	public void init() {
 		gameover = false;
-		start = true;
+		start = false;
 		counter = 0;
 		score = 0;
 		bd = new bird();

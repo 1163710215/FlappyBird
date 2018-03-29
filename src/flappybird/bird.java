@@ -21,7 +21,7 @@ class bird {
 	// private int step;// 步长,即为速度
 	private BufferedImage[] images = new BufferedImage[3];// 储存鸟图
 	// private int score;// 成绩
-	private double speed = 20;// 速度
+	private double speed;// 速度
 	// nothing
 	final private double g = 3;// 重力
 	final private double t = 0.25;
