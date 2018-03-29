@@ -31,18 +31,19 @@ public class Birdpanel extends JPanel {
 	 * Create the panel.
 	 */
 	public Birdpanel() {
-		gameover = false;
-		start = false;
-		counter = 0;// use to spawn a wall
-		score = 0;
+		// gameover = false;
+		// start = false;
+		// counter = 0;// use to spawn a wall
+		// score = 0;
 		try {
-			gr = new ground();
-			bd = new bird();
+			init();
+			// gr = new ground();
+			// bd = new bird();
 			background = ImageIO.read(new FileInputStream("sources/背景/白天.png"));
 			startImage = ImageIO.read(new FileInputStream("sources/其他/开始.png"));
 			overImage = ImageIO.read(new FileInputStream("sources/其他/gameover.png"));
 			restart = ImageIO.read(new FileInputStream("sources/其他/重来.png"));
-			map = new Gamemap();
+			// map = new Gamemap();
 			// background =
 			// ImageIO.read(this.getClass().getResource("/sources/背景/白天.png"));
 			// startImage =
@@ -95,17 +96,6 @@ public class Birdpanel extends JPanel {
 			g.drawImage(overImage, 80, 200, null);
 			g.drawImage(restart, 120, 300, null);
 		}
-	}
-
-	public void init() {
-		gameover = false;
-		start = false;
-		counter = 0;
-		score = 0;
-		bd = new bird();
-		gr = new ground();
-		map = new Gamemap();
-		map.bd = bd;
 	}
 
 	/**
@@ -186,6 +176,17 @@ public class Birdpanel extends JPanel {
 			}
 			repaint();
 		}
+	}
+
+	public void init() {
+		gameover = false;
+		start = false;
+		counter = 0;
+		score = 0;
+		bd = new bird();
+		gr = new ground();
+		map = new Gamemap();
+		map.bd = bd;
 	}
 
 }
