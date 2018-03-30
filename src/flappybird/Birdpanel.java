@@ -67,8 +67,8 @@ public class Birdpanel extends JPanel {
 			g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
 		} else {
 			if (!gameover) {
-				// g.clearRect(0, 0, 432, 674);
-				// g.drawImage(background, 0, 0, 432, 600, null);
+				//g.clearRect(0, 0, 432, 674);
+				//g.drawImage(background, 0, 0, 432, 600, null);
 				for (int i = 0; i < map.walls.size(); i++) {
 					g.drawImage(map.walls.get(i).getIMG(), map.walls.get(i).getX(), map.walls.get(i).getY(), null);
 				}
@@ -91,7 +91,7 @@ public class Birdpanel extends JPanel {
 			// }
 			// g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
 			// g.drawImage(bd.getIMG()[0], bd.getX(), bd.getY(), null);
-
+			//g.clearRect(0, 0, 432, 674);
 			g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
 			g.drawImage(overImage, 80, 200, null);
 			g.drawImage(restart, 120, 300, null);
