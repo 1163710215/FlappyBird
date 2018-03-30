@@ -77,25 +77,27 @@ public class Birdpanel extends JPanel {
 				if (statement >= 3)
 					statement = 0;
 				g.drawImage(bd.getIMG()[statement], bd.getX(), bd.getY(), null);
-				Font font = new Font("楷体", Font.BOLD, 30);
-				g.setFont(font);
-				g.setColor(Color.white);
-				g.drawString("分数" + score, 10, 30);
 
 			}
-		}
-		if (gameover) {
-			// for (int i = 0; i < map.walls.size(); i++) {
-			// g.drawImage(map.walls.get(i).getIMG(), map.walls.get(i).getX(),
-			// map.walls.get(i).getY(), null);
-			// }
-			// g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
-			// g.drawImage(bd.getIMG()[0], bd.getX(), bd.getY(), null);
+			Font font = new Font("楷体", Font.BOLD, 30);
+			g.setFont(font);
+			g.setColor(Color.white);
+			g.drawString("分数" + score, 10, 30);
+			if (gameover) {
+				// for (int i = 0; i < map.walls.size(); i++) {
+				// g.drawImage(map.walls.get(i).getIMG(),
+				// map.walls.get(i).getX(),
+				// map.walls.get(i).getY(), null);
+				// }
+				// g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
+				// g.drawImage(bd.getIMG()[0], bd.getX(), bd.getY(), null);
 
-			g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
-			g.drawImage(overImage, 80, 200, null);
-			g.drawImage(restart, 120, 300, null);
+				g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
+				g.drawImage(overImage, 80, 200, null);
+				g.drawImage(restart, 120, 300, null);
+			}
 		}
+
 	}
 
 	/**
