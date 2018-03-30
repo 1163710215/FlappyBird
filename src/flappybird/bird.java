@@ -23,7 +23,7 @@ class bird {
 	// private int score;// 成绩
 	private double speed;// 速度
 	// nothing
-	final private double g = 3;// 重力
+	final private double g = 2;// 重力
 	final private double t = 0.25;
 
 	/**
