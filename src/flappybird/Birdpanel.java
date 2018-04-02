@@ -63,6 +63,7 @@ public class Birdpanel extends JPanel {
 		g.drawImage(background, 0, 0, 432, 600, null);
 
 		if (!start) {
+			init();
 			g.drawImage(startImage, 0, 100, 432, 500, null);
 			g.drawImage(gr.getIMG(), gr.getX(), 600, 864, 74, null);
 		} else {
@@ -129,8 +130,7 @@ public class Birdpanel extends JPanel {
 					// change the speed
 					if (!gameover) {
 						map.bd.changeSpeed();
-					}
-					if (gameover) {
+					} else {
 						// restart
 						init();
 
